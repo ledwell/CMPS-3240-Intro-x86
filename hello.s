@@ -2,7 +2,7 @@
 	.text
 	.section	.rodata
 .myString:
-    .string "%d\n"
+        .string "%d\n"
 .LC2:
 	.string	"Hi Working, I'm dad.\n"
 	.text
@@ -27,10 +27,10 @@ main:
 	leaq	.LC2(%rip), %rdi
 	movl	$0, %eax
 	call	printf@PLT
-    leaq    .myString(%rip), %rdi
-    movq    -4(%rbp), %rsi
-    movl    $0, %eax
-    call    printf@PLT
+        leaq    .myString(%rip), %rdi
+        movq    -4(%rbp), %rsi
+        movl    $0, %eax
+        call    printf@PLT
 	movl	$0, %eax
 	leave
 	.cfi_def_cfa 7, 8
